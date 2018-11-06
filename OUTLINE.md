@@ -39,6 +39,7 @@
 1. Storage vs Database
 2. uploadTask
 	- `.on( ... )`
+	- `.then( ... )`
 3. snapshot
 	- `bytesTransferred`
 	- `totalBytes`
@@ -52,7 +53,7 @@
 4. `.delete()`
 5. List all files
 	- `name: url` in database
-		- can't use .
+		- can't use `.`
 		- so use `.push()`
 
 # Firebase-tools
