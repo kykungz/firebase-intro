@@ -74,4 +74,12 @@
 5. `.signInWithPopup(provider)`
 6. `.onAuthStateChanged(user => {})`
 
-# Cloud functions
+# Cloud Functions
+1. Intro to serverless
+2. Triggers
+	- HTTP Triggers
+	- Background Triggers
+3. Terminating Rules
+	- HTTP Triggers - send a response at the end
+	- Background Triggers - return a `Promise`
+
