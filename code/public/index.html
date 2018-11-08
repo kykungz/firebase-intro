@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    h1, h2, h3, h4 {
+      font-family: sans-serif;
+    }
+    button {
+      font-size: 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin: 4px;
+      transition: all 300ms;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(1.2);
+    }
+    input[type="text"] {
+      font-size: 26px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Authentication</h1>
+  <pre id="auth-info"></pre>
+  <input type="text" placeholder="email" id="email">
+  <input type="text" placeholder="password" id="password">
+  <br>
+  <button onclick="createUser()">Create User</button>
+  <button onclick="loginWithEmail()">Login</button>
+  <br>
+  <button onclick="loginWithGoogle()">Login with Google</button>
+  <button onclick="loginWithFacebook()">Login with Facebook</button>
+  <br>
+  <button onclick="logout()">Logout</button>
+  <hr>
+
+  <h1>Realtime Database</h1>
+  <pre id="realtime-data"></pre>
+  <button onclick="setData()">set</button>
+  <button onclick="updateData()">update</button>
+  <button onclick="pushData()">push</button>
+  <button onclick="removeData()">delete</button>
+
+  <hr>
+
+  <h1>Cloud Storage</h1>
+  <h3 id="progress"></h3>
+  <div id="file-list"></div>
+  <input id="input-file" type="file" onchange="addFile()">
+  <br>
+  <button onclick="uploadFile()">upload</button>
+  <button onclick="pause()">pause</button>
+  <button onclick="resume()">resume</button>
+  <button onclick="cancel()">cancel</button>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAFx7V1R7tnrxCzyT4lclguWrX8a68Rp-U",
+      authDomain: "fir-tutorial-56935.firebaseapp.com",
+      databaseURL: "https://fir-tutorial-56935.firebaseio.com",
+      projectId: "fir-tutorial-56935",
+      storageBucket: "fir-tutorial-56935.appspot.com",
+      messagingSenderId: "80495944921"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="database.js"></script>
+  <script src="storage.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
